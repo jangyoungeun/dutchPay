@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>더치페이 계산기</title>
+	
+</head>
+<body>
+	<h1 id="display">입금은 바로바로! 더치페이 계산기</h1><br>
+	<p1>금액을 적어주세요.</p1><br>
+	<input type="Text" id="one" placeholder="1차">원<br>
+	<input type="Text" id="two" placeholder="2차">원<br>
+	<input type="Text" id="three" placeholder="3차">원<br>
+	<input type="Text" id="four" placeholder="4차">원<br><br>
+	<input type="Text" id="number" placeholder="몇">명
+	<button id="action">계산하기</button>
+
+	<script>
+
+		action.onclick = function(){
+			console.log("OK");
+			var myone = one.value;
+			var mytwo = two.value;
+			var mythree = three.value;
+			var myfour = four.value;
+			var mynumber = number.value;
+			dutchPay(myone, mytwo, mythree, myfour, mynumber);
+		}
+
+		function dutchPay(one, two, three, four, number){
+
+			var one = one-0;
+			var two = two-0;
+			var three = three-0;
+			var four = four-0;
+
+			var howMuch = one + two + three + four;
+			var result = howMuch / number;
+			var Text = "친구들아 " + result + "원 보내줘~";
+			display.innerHTML = Text;
+
+		}
+
+	</script>
+
+</body>
+</html>
